@@ -72,21 +72,20 @@ function gameOver(){
     btn.innerHTML = "New Game";
     document.body.appendChild(btn);
 
-    var score = document.getElementById("score");
-    score.style.color = "red";
+    document.getElementById("score").style.color = "red";
 
     btn.onclick = function(){
         document.location.reload();
     }
 
-    const Http = new XMLHttpRequest();
-    const url='https://snake-game-api.herokuapp.com/users/score';
-    Http.open("GET", url);
-    Http.send(body:{"userName": "talha", "score": score});
-
-    Http.onreadystatechange = (e) => {
-      console.log(Http.responseText)
-    }
+    $.ajax({
+        url:'https://snake-game-api.herokuapp.com/users/score',
+        type:'POST',
+        data: {userName: "talha", score: score},
+        success:function(response){
+          console.log = response;
+        }
+      });
 
     return true;
 }

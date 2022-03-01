@@ -1,3 +1,4 @@
+<?php header("Access-Control-Allow-Origin: *"); ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -88,7 +89,7 @@
                     <td style="color:#f07167; font-size:18px;">Score</td>
                 </tr>
                 <tr>
-                    <td><?=$userName?></td>
+                    <td>User Name</td>
                     <td id="userScore">0</td>
                 </tr>
             </table>
