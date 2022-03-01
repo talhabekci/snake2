@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #f8f8f8;
+    padding: 30px;
+}
+
+.loginForm{
+    margin: auto;
+    max-width: 850px;
+    width: 50%;
+    background: #fff;
+    padding: 40px 30px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    perspective: 2700px;
+    height: 300px;
+}
+
+
+.loginForm .formContent{
+    margin: 65px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title{
+    text-align: center;
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.formContent .inputBox{
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.formContent .inputBox input[type=text]{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+    font-size: 19px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.formContent .inputBox input:focus,
+.formContent .inputBox input:valid{
+  border-color: #ffe8d6;
+}
+
+.formContent input[type=submit]{
+    margin-top: 10px;
+    width: 25%;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color:#ffe8d6;
+}
+
+.formContent input[type=submit]:hover{
+    background-color:#f7a261;
+    cursor: pointer;
+}
