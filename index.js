@@ -1,3 +1,6 @@
+var name = prompt('Please enter your name');
+document.getElementById("userName").innerHTML = name;
+
 const board_border = 'black';
 const board_background = '#ffe8d6';
 const snake_col = 'lightblue';
@@ -81,7 +84,7 @@ function gameOver(){
     $.ajax({
         url:'https://snake-game-api.herokuapp.com/users/score',
         type:'POST',
-        data: {userName: "talha", score: score},
+        data: {userName: name, score: score},
         success:function(response){
           console.log = response;
         }

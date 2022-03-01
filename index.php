@@ -1,4 +1,6 @@
-<?php header("Access-Control-Allow-Origin: *"); ?>
+<?php
+header("Access-Control-Allow-Origin: *");
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -80,7 +82,7 @@
             <canvas id="gameCanvas" width="400" height="400"></canvas>
         </div>
         <div id="scoreBoard">
-            <table class="scoreBrd" border="1">
+            <table id="scrBrd" class="scoreBrd" border="1">
                 <tr>
                     <td style="color:#c1121f; font-size:20px;" colspan="2"><b>Score Board</b></td>
                 </tr>
@@ -89,7 +91,7 @@
                     <td style="color:#f07167; font-size:18px;">Score</td>
                 </tr>
                 <tr>
-                    <td>User Name</td>
+                    <td id="userName"></td>
                     <td id="userScore">0</td>
                 </tr>
             </table>
