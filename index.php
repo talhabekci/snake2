@@ -1,7 +1,7 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 
-$scoresLink = "http://localhost:3000/users/";
+$scoresLink = "https://snake-game-api.herokuapp.com/users";
 
 $scores = file_get_contents($scoresLink);
 
