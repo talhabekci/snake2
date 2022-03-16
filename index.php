@@ -1,5 +1,12 @@
 <?php
 header("Access-Control-Allow-Origin: *");
+
+$scoresLink = "http://localhost:3000/users/";
+
+$scores = file_get_contents($scoresLink);
+
+$data = json_decode($scores, TRUE);
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -60,6 +67,11 @@ header("Access-Control-Allow-Origin: *");
             margin-top: 50px;
         }
 
+        #userInfo{
+            display: inline-block;
+            color: red;
+        }
+
         #gameBoard{
             position:fixed;
             width:600px;
@@ -76,6 +88,11 @@ header("Access-Control-Allow-Origin: *");
         }
     </style>
     <body>
+        <script type="text/javascript">
+            // fetch('http://localhost:3000/users/')
+            // .then(response => response.json())
+            // .then(data => var score = data)
+        </script>
         <div id="gameBoard">
             <div id="score">0</div>
             <div id="gameOver"></div>
@@ -91,10 +108,14 @@ header("Access-Control-Allow-Origin: *");
                     <td style="color:#f07167; font-size:18px;">Score</td>
                 </tr>
                 <tr>
-                    <td id="userName"></td>
-                    <td id="userScore">0</td>
+                    <td><?php echo json_encode($data[0]["userName"]); ?></td>
+                    <td><?php echo json_encode($data[0]["score"]); ?></td>
                 </tr>
             </table>
+        </div>
+        <div id="userInfo">
+            <div id="userName"></div>
+            <div id="userScore"></div>
         </div>
         <script src="index.js"></script>
     </body>
